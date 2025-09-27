@@ -58,7 +58,50 @@
         <h3>BSc, Physics</h3>
         <p class="institution">University of Dhaka, Bangladesh</p>
         <p class="date">2018 - 2023</p>
-        <p class="thesis"><strong>CGPA:</strong> 3.15/4.00</p>
+        <p class="thesis"><strong>CGPA:</strong> 3.15/4.00 
+          <span class="cgpa-info" onclick="showCGPAModal()" style="cursor: pointer;"><u>(Why low? 🤔)</u></span>
+        </p>
+        
+        <!-- Modal for CGPA explanation -->
+        <div id="cgpaModal" class="modal" style="display: none;">
+          <div class="modal-content">
+            <span class="close" onclick="hideCGPAModal()">&times;</span>
+            <h3>About My CGPA</h3>
+            <p>My CGPA doesn't reflect my true potential as a researcher and physicist.</p>
+
+            <u>It is low because:</u>
+            <p>During the final exams of my freshman year, I became ill and could not perform at my best. In my second year, I doubted whether I should continue studying physics. As a result, I became irregular in my studies and received very low grades. Later, the COVID-19 pandemic further disrupted my studies.</p>
+
+            <u>What I did during this time:</u>
+            <p>I involved myself in various volunteering and professional activities and explored new areas of interest, such as data science, machine learning, data structures and algorithms, and Python programming.</p>
+
+            <u>How I recovered:</u>
+            <p>In my third year, I regained my passion for physics after I started learning quantum mechanics. I was captivated by the elegance of linear algebra and its power to explain complex quantum phenomena, which helped me fully refocus on my studies. Because of the large gap in my physics knowledge, it took significant time and effort to catch up. Through online courses, guidance from my professors, and self-study, I was able to bridge the gap, and this improvement became visible in my final-year results.</p>
+
+            <u>Do I regret the lost time?</u>
+            <p>Not at all! This period was crucial for my personal and professional growth. I gained many new perspectives from the different areas I explored, and most importantly, this period of self-doubt helped me realize that I truly love physics and want to pursue it as a lifelong career.</p>
+
+            <p>Thank you for understanding my journey. I am confident that my experiences have made me a more resilient and dedicated individual, with a deeper understanding of the challenges and rewards of studying physics.</p>
+          </div>
+        </div>
+
+        <script>
+          function showCGPAModal() {
+            document.getElementById('cgpaModal').style.display = 'block';
+          }
+          
+          function hideCGPAModal() {
+            document.getElementById('cgpaModal').style.display = 'none';
+          }
+          
+          // Close modal when clicking outside of it
+          window.onclick = function(event) {
+            const modal = document.getElementById('cgpaModal');
+            if (event.target == modal) {
+              modal.style.display = 'none';
+            }
+          }
+        </script>
         <div class="courses">
           <h4>Relevant Coursework:</h4>
           <ul>
